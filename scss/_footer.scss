@@ -1,0 +1,118 @@
+@use "mixins.scss" as mixins;
+
+.footer {
+  background-color: #F8F8F8;
+  position: relative;
+  margin-top: 200px;
+
+  &::before {
+    content: url("../img/common/decore.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+  padding-top: 93px;
+  padding-bottom: 69px;
+  display: flex;
+  justify-content: space-between;
+}
+
+// style "company" section
+.footer__company {
+  max-width: 350px;
+}
+
+.footer__company-desc {
+  margin-top: 0.833em;
+  line-height: 1.5556em;
+}
+
+
+// style "navigation" section
+.footer__nav {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.footer__nav-header {
+  font-weight: 600;
+  font-size: 1.333rem;
+  line-height: 1.667em;
+  color: #212121;
+  margin-bottom: 1em;
+}
+
+.footer__nav-list-item {
+  line-height: 2.7em;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+}
+
+.footer__social-media-links {
+  display: flex;
+  gap: 0.44rem;
+}
+
+.footer__social-media-link {
+  position: relative;
+
+  &:hover .footer__social-media-circle {
+    background-color: #37806B;
+  }
+}
+
+.footer__social-media-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+  background-color: #D5D5D5;
+}
+
+.footer__social-media-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer__copyrights {
+  text-align: center;
+  border-top: 1px solid #C4C4C4;
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  padding: 1rem;
+}
+
+.footer__copyrights-highlighted {
+  color: #37806B;
+}
+
+// do adaptive
+@media (max-width: 992px) {
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+}

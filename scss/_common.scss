@@ -1,0 +1,16 @@
+@use "vars.scss" as vars;
+
+// set default font
+html {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #646464;
+}
+
+.container {
+  max-width: vars.$container-width;
+  padding: 0 vars.$container-padding-x;
+  margin: 0 auto;
+}
