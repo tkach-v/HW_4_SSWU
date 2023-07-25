@@ -17,6 +17,9 @@ html {
 }
 
 // style header__content, about, etc blocks
+$image-rect-space: 1.8rem;
+$image-rect-border-radius: 7.77778rem;
+
 .block-1 {
   display: flex;
   align-items: center;
@@ -53,8 +56,8 @@ html {
 }
 
 .block-1__img-container {
-  padding-right: 1.8rem;
-  padding-bottom: 1.8rem;
+  padding-right: $image-rect-space;
+  padding-bottom: $image-rect-space;
 }
 
 .block-1__img-wrapper {
@@ -66,16 +69,16 @@ html {
   z-index: 1;
   width: 100%;
   height: auto;
-  @include mixins.leaf-shape-rect(7.77778rem);
+  @include mixins.leaf-shape-rect($image-rect-border-radius);
 }
 
 .block-1__img-decore {
   position: absolute;
-  left: 1.8rem;
-  top: 1.8rem;
+  left: $image-rect-space;
+  top: $image-rect-space;
   z-index: 0;
   width: 100%;
   height: 100%;
-  @include mixins.leaf-shape-rect(7.77778rem);
+  @include mixins.leaf-shape-rect($image-rect-border-radius);
   border: 2px solid #B0855B;
 }
