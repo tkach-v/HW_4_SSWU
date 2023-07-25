@@ -1,0 +1,83 @@
+@use "mixins.scss" as mixins;
+@use "vars.scss" as vars;
+
+.about {
+  margin-top: 200px;
+  position: relative;
+
+  &::before {
+    content: url("../img/common/decore-2.svg");
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+    z-index: 0;
+  }
+}
+
+.about-us {
+  gap: 4rem;
+}
+
+.about-us__img-container {
+  padding: 1.8rem 0 0 1.8rem;
+}
+
+.about-us__rounded-img-decore {
+  left: -1.8rem;
+  top: -1.8rem;
+}
+
+.about-us__content {
+  width: 50%;
+}
+
+.about-us__btn-container,
+.years-20__btn-container {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  scale: 1;
+}
+
+.years-20 {
+  position: relative;
+  z-index: 1;
+  gap: 4rem;
+  margin-top: 180px;
+}
+
+.years-20__content {
+  width: 50%;
+}
+
+.years-20__title,
+.years-20__btn-container {
+  margin-top: 1.5rem;
+}
+
+// do adaptive
+@media (max-width: vars.$mobile) {
+  .about-us {
+    flex-direction: column;
+  }
+
+  .years-20 {
+    flex-direction: column-reverse;
+  }
+
+  .about-us__content,
+  .years-20__content {
+    width: 100%;
+  }
+
+  .years-20__title {
+    width: 100%;
+  }
+}
+
+// add hover on desktop
+@media (min-width: vars.$mobile) {
+  .about-us__btn-container:hover,
+  .years-20__btn-container:hover {
+    scale: 1.1;
+  }
+}

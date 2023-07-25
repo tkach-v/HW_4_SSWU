@@ -96,11 +96,16 @@
   position: relative;
   z-index: 1;
   padding-top: calc(70px + 70px);
-  gap: calc(2.5rem);
+  gap: 2.5rem;
 }
 
 .header__content-content {
   width: 50%;
+}
+
+.header__content-title {
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .header__content-btn-container {
@@ -217,7 +222,7 @@
   }
 
   .header__content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .header__content-content {

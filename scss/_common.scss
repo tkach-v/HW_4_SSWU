@@ -25,28 +25,29 @@ $image-rect-border-radius: 7.77778rem;
   align-items: center;
 }
 
-.block-1__subtitle {
+.subtitle {
   color: #646464;
   font-size: 1.11111rem;
   font-weight: 600;
   padding-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
-.block-1__title {
+.title {
   color: #212121;
   font-family: Poppins, sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2.7rem;
+  font-weight: 500;
   line-height: 1.08em;
   padding-bottom: 1.4rem;
 }
 
-.block-1__text {
+.text {
   line-height: 1.66667rem;
   padding-bottom: 2.8rem;
 }
 
-.block-1__btn {
+.btn {
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -55,16 +56,16 @@ $image-rect-border-radius: 7.77778rem;
   @include mixins.leaf-shape-rect(1.11111rem, #37806B);
 }
 
-.block-1__img-container {
+.rounded-img-container {
   padding-right: $image-rect-space;
   padding-bottom: $image-rect-space;
 }
 
-.block-1__img-wrapper {
+.rounded-img-wrapper {
   position: relative;
 }
 
-.block-1__img {
+.rounded-img {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -72,7 +73,7 @@ $image-rect-border-radius: 7.77778rem;
   @include mixins.leaf-shape-rect($image-rect-border-radius);
 }
 
-.block-1__img-decore {
+.rounded-img-decore {
   position: absolute;
   left: $image-rect-space;
   top: $image-rect-space;

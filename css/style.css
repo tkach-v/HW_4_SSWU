@@ -63,28 +63,29 @@ html {
   align-items: center;
 }
 
-.block-1__subtitle {
+.subtitle {
   color: #646464;
   font-size: 1.11111rem;
   font-weight: 600;
   padding-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
-.block-1__title {
+.title {
   color: #212121;
   font-family: Poppins, sans-serif;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2.7rem;
+  font-weight: 500;
   line-height: 1.08em;
   padding-bottom: 1.4rem;
 }
 
-.block-1__text {
+.text {
   line-height: 1.66667rem;
   padding-bottom: 2.8rem;
 }
 
-.block-1__btn {
+.btn {
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -94,16 +95,16 @@ html {
   background-color: #37806B;
 }
 
-.block-1__img-container {
+.rounded-img-container {
   padding-right: 1.8rem;
   padding-bottom: 1.8rem;
 }
 
-.block-1__img-wrapper {
+.rounded-img-wrapper {
   position: relative;
 }
 
-.block-1__img {
+.rounded-img {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -112,7 +113,7 @@ html {
   background-color: inherit;
 }
 
-.block-1__img-decore {
+.rounded-img-decore {
   position: absolute;
   left: 1.8rem;
   top: 1.8rem;
@@ -232,6 +233,11 @@ html {
   width: 50%;
 }
 
+.header__content-title {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
 .header__content-btn-container {
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -328,7 +334,7 @@ html {
     left: 0;
   }
   .header__content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .header__content-content {
     width: 100%;
@@ -352,10 +358,87 @@ html {
     scale: 1.1;
   }
 }
+.service {
+  margin-top: 200px;
+}
+
+.about {
+  margin-top: 200px;
+  position: relative;
+}
+.about::before {
+  content: url("../img/common/decore-2.svg");
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+  z-index: 0;
+}
+
+.about-us {
+  gap: 4rem;
+}
+
+.about-us__img-container {
+  padding: 1.8rem 0 0 1.8rem;
+}
+
+.about-us__rounded-img-decore {
+  left: -1.8rem;
+  top: -1.8rem;
+}
+
+.about-us__content {
+  width: 50%;
+}
+
+.about-us__btn-container,
+.years-20__btn-container {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  scale: 1;
+}
+
+.years-20 {
+  position: relative;
+  z-index: 1;
+  gap: 4rem;
+  margin-top: 180px;
+}
+
+.years-20__content {
+  width: 50%;
+}
+
+.years-20__title,
+.years-20__btn-container {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .about-us {
+    flex-direction: column;
+  }
+  .years-20 {
+    flex-direction: column-reverse;
+  }
+  .about-us__content,
+  .years-20__content {
+    width: 100%;
+  }
+  .years-20__title {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .about-us__btn-container:hover,
+  .years-20__btn-container:hover {
+    scale: 1.1;
+  }
+}
 .footer {
   background-color: #F8F8F8;
   position: relative;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .footer::before {
   content: url("../img/common/decore.svg");
