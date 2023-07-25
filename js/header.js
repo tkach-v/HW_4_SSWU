@@ -15,8 +15,8 @@ document.addEventListener('click', event => {
     }
 
     if (targetElement.closest('[data-goto]')) {
-        if (document.documentElement.classList.contains('header__top_open')) {
-            document.documentElement.classList.remove();
+        if (document.querySelector(".header__top").classList.contains('header__top_open')) {
+            document.querySelector(".header__top").classList.remove('header__top_open');
         }
 
         const goTo = targetElement.closest('[data-goto]').dataset.goto;

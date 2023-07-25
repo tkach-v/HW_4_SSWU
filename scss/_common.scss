@@ -1,4 +1,5 @@
 @use "vars.scss" as vars;
+@use "mixins.scss" as mixins;
 
 // set default font
 html {
@@ -13,4 +14,68 @@ html {
   max-width: vars.$container-width;
   padding: 0 vars.$container-padding-x;
   margin: 0 auto;
+}
+
+// style header__content, about, etc blocks
+.block-1 {
+  display: flex;
+  align-items: center;
+}
+
+.block-1__subtitle {
+  color: #646464;
+  font-size: 1.11111rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+}
+
+.block-1__title {
+  color: #212121;
+  font-family: Poppins, sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.08em;
+  padding-bottom: 1.4rem;
+}
+
+.block-1__text {
+  line-height: 1.66667rem;
+  padding-bottom: 2.8rem;
+}
+
+.block-1__btn {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 15px 30px;
+  @include mixins.leaf-shape-rect(1.11111rem, #37806B);
+}
+
+.block-1__img-container {
+  padding-right: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.block-1__img-wrapper {
+  position: relative;
+}
+
+.block-1__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  @include mixins.leaf-shape-rect(7.77778rem);
+}
+
+.block-1__img-decore {
+  position: absolute;
+  left: 1.8rem;
+  top: 1.8rem;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  @include mixins.leaf-shape-rect(7.77778rem);
+  border: 2px solid #B0855B;
 }

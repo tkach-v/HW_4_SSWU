@@ -1,4 +1,5 @@
 @use "mixins.scss" as mixins;
+@use "vars.scss" as vars;
 
 .footer {
   background-color: #F8F8F8;
@@ -22,6 +23,7 @@
   padding-bottom: 69px;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 // style "company" section
@@ -38,7 +40,7 @@
 // style "navigation" section
 .footer__nav {
   display: flex;
-  gap: 3.6rem;
+  gap: 3rem;
 }
 
 .footer__nav-header {
@@ -50,18 +52,14 @@
 }
 
 .footer__nav-list-item {
-  line-height: 2.7em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
 }
 
 .footer__nav-link {
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #000000;
-    text-decoration: underline;
-  }
 }
 
 .footer__social-media-links {
@@ -69,18 +67,11 @@
   gap: 0.44rem;
 }
 
-.footer__social-media-link {
-  position: relative;
-
-  &:hover .footer__social-media-circle {
-    background-color: #37806B;
-  }
-}
-
 .footer__social-media-circle {
+  position: relative;
   width: 38px;
   height: 38px;
-  border-radius: 100%;
+  border-radius: 50%;
   transition: all 0.2s ease-in-out;
   background-color: #D5D5D5;
 }
@@ -105,14 +96,25 @@
 }
 
 // do adaptive
-@media (max-width: 992px) {
+@media (max-width: vars.$mobile) {
   .footer__content {
     flex-direction: column;
   }
 
   .footer__nav {
     flex-direction: column;
-    gap: 2.5rem;
-    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+}
+
+// add hover on desktop
+@media (min-width: vars.$mobile) {
+  .footer__nav-link:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .footer__social-media-link:hover .footer__social-media-circle {
+    background-color: #37806B;
   }
 }
