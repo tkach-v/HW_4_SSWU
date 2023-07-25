@@ -1,0 +1,29 @@
+@use "vars.scss" as vars;
+
+.latest-news {
+  background: vars.$grey-bg;
+  position: relative;
+
+  &::before {
+    content: url("../img/common/decore-2.svg");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transform: translateY(50%);
+  }
+}
+
+.latest-news__inner {
+  padding-top: 5rem;
+  padding-bottom: 6.5rem;
+}
+
+.latest-news__title,
+.latest-news__subtitle {
+  text-align: center;
+}
+
+.latest-news__title {
+  padding-bottom: 4.5rem;
+}

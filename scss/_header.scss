@@ -140,7 +140,7 @@
     height: 100%;
     top: 0;
     left: -100%;
-    background-color: #F8F8F8;
+    background-color: vars.$grey-bg;
     padding-top: 100px;
     transition: all 0.2s ease-in-out;
   }

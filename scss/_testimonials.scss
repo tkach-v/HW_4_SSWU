@@ -1,0 +1,26 @@
+@use "vars.scss" as vars;
+
+.testimonials {
+  position: relative;
+
+  &::before {
+    content: url("../img/common/decore.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.testimonials__inner {
+  padding-top: 7.4rem;
+  padding-bottom: 13rem;
+}
+
+.testimonials__title,
+.testimonials__subtitle {
+  text-align: center;
+}
+
+

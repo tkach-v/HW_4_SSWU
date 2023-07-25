@@ -2,9 +2,8 @@
 @use "vars.scss" as vars;
 
 .footer {
-  background-color: #F8F8F8;
+  background-color: vars.$grey-bg;
   position: relative;
-  margin-top: 100px;
 
   &::before {
     content: url("../img/common/decore.svg");
