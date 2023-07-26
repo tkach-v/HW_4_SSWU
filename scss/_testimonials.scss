@@ -1,4 +1,5 @@
 @use "vars.scss" as vars;
+@use "mixins.scss" as mixins;
 
 .testimonials {
   position: relative;
@@ -14,8 +15,7 @@
 }
 
 .testimonials__inner {
-  padding-top: 7.4rem;
-  padding-bottom: 13rem;
+  padding: 6rem 0
 }
 
 .testimonials__title,
@@ -23,4 +23,154 @@
   text-align: center;
 }
 
+.testimonials__title {
+  padding: 0;
+}
+
+$swiper-paddings: 40px;
+.testimonials__swiper-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 53px;
+  padding-top: 10px;
+  padding-right: $swiper-paddings;
+  margin-bottom: 70px;
+}
+
+.testimonials__swiper-button-prev,
+.testimonials__swiper-button-next {
+  border: 0;
+  cursor: pointer;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.30);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #37806B;
+
+   svg path {
+      stroke: #FFFFFF;
+    }
+  }
+}
+
+.testimonials__swiper-button-prev-img,
+.testimonials__swiper-button-next-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.testimonials__swiper-button-prev-img {
+  left: 35%;
+}
+
+.testimonials__swiper-button-next-img {
+  right: 35%;
+}
+
+.testimonials__slide-wrapper {
+  padding-bottom: 50px;
+  padding-left: calc(65px + $swiper-paddings);
+  padding-right: $swiper-paddings;
+}
+
+.testimonials__slide-content {
+  @include mixins.leaf-shape-rect(3.88889rem, #FFFFFF);
+  box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+  padding: 2.28rem 2.11rem 3.33rem 5.5rem;
+  position: relative;
+}
+
+.testimonials__slide-image-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  @include mixins.leaf-shape-rect(1.94444rem);
+  height: 130px;
+  width: 130px;
+  overflow: hidden;
+}
+
+.testimonials__slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__slide-person-info {
+  display: flex;
+  align-items: end;
+  padding-bottom: 0.44rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials__slide-person-name {
+  color: #212121;
+  font-size: 1.33333rem;
+  font-weight: 700;
+}
+
+.testimonials__slide-person-info-delimiter {
+  padding-left: 5px;
+}
+
+.testimonials__slide-person-info-delimiter,
+.testimonials__slide-person-position {
+  font-size: 0.88889rem;
+}
+
+.testimonials__slide-review {
+  line-height: 1.56em;
+}
+
+.testimonials__slide-decoration {
+  color: #B0855B;
+  font-family: "Basic Sans SF", sans-serif;
+  font-size: 5.33333rem;
+  font-weight: 700;
+  position: absolute;
+  z-index: 0;
+  top: 0.83rem;
+  right: 1.89rem;
+}
+
+@media (max-width: 576px) {
+  .testimonials__swiper-buttons {
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .testimonials__slide-person-info-delimiter {
+    display: none;
+  }
+
+  .testimonials__slide-person-position {
+    padding-top: 5px;
+  }
+
+  .testimonials__slide-person-info {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .testimonials__slide-image-wrapper {
+    display: none;
+  }
+
+  .testimonials__slide-wrapper {
+    padding-left: $swiper-paddings;
+  }
+
+  .testimonials__slide-content {
+    padding: 2rem;
+  }
+}
 

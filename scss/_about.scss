@@ -1,7 +1,8 @@
 @use "vars.scss" as vars;
+@use "mixins.scss" as mixins;
 
 .about {
-  margin-top: 200px;
+  margin-top: 140px;
   position: relative;
 
   &::before {

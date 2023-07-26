@@ -3,6 +3,7 @@
 .latest-news {
   background: vars.$grey-bg;
   position: relative;
+  overflow: hidden;
 
   &::before {
     content: url("../img/common/decore-2.svg");
@@ -17,6 +18,7 @@
 .latest-news__inner {
   padding-top: 5rem;
   padding-bottom: 6.5rem;
+  transition: all 1.5s ease-in-out;
 }
 
 .latest-news__title,
@@ -26,4 +28,81 @@
 
 .latest-news__title {
   padding-bottom: 4.5rem;
+}
+
+.latest-news__content {
+  display: flex;
+  gap: 6rem;
+}
+
+.latest-news__item {
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.latest-news__rounded-img-container {
+  max-height: 400px;
+  height: 100%;
+}
+
+.latest-news__rounded-img-wrapper {
+  height: 100%;
+}
+
+.latest-news__rounded-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.latest-news__item-title {
+  margin-top: 2.3rem;
+  margin-bottom: 0.95rem;
+  color: #212121;
+  font-size: 1.66667rem;
+  font-weight: 600;
+}
+
+.latest-news__btn-container {
+  display: inline-block;
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.latest-news__item-text,
+.latest-news__btn-container {
+  opacity: 0;
+}
+
+.latest-news__inner {
+  opacity: 0;
+}
+
+
+// do adaptive
+@media (max-width: vars.$mobile) {
+  .latest-news__content {
+    flex-direction: column;
+  }
+
+  .latest-news__item-text,
+  .latest-news__btn-container {
+    opacity: 1;
+  }
+}
+
+// add hover on desktop
+@media (min-width: vars.$mobile) {
+  .latest-news__btn-container:hover {
+    scale: 1.1;
+  }
+
+  .latest-news__item:hover {
+    scale: 1.1;
+
+    .latest-news__item-text,
+    .latest-news__btn-container {
+      opacity: 1;
+    }
+  }
 }

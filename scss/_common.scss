@@ -18,7 +18,9 @@ html {
 
 // style header__content, about, etc blocks
 $image-rect-space: 1.8rem;
+$image-rect-space-small: 1rem;
 $image-rect-border-radius: 7.77778rem;
+$image-rect-border-radius-small: 5rem;
 
 .block-1 {
   display: flex;
@@ -82,4 +84,27 @@ $image-rect-border-radius: 7.77778rem;
   height: 100%;
   @include mixins.leaf-shape-rect($image-rect-border-radius);
   border: 2px solid #B0855B;
+}
+
+@media (max-width: vars.$mobile) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .rounded-img,
+  .rounded-img-decore {
+    @include mixins.leaf-shape-rect($image-rect-border-radius-small);
+  }
+
+  .rounded-img-container {
+    padding-right: $image-rect-space-small;
+    padding-bottom: $image-rect-space-small;
+  }
+
+  .rounded-img-decore {
+    left: $image-rect-space-small;
+    top: $image-rect-space-small;
+  }
 }

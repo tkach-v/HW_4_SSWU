@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Decbase</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,25 +23,25 @@
                         <a class="menu__link" href="#" data-goto=".header">Home</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__link" href="#" data-goto=".header">Project</a>
+                        <a class="menu__link" href="#" data-goto=".header__content">Project</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__link" href="#" data-goto=".header">Services</a>
+                        <a class="menu__link" href="#" data-goto=".service">Services</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__link " href="#" data-goto=".header">About</a>
+                        <a class="menu__link " href="#" data-goto=".about">About</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__link" href="#" data-goto=".header">Blog</a>
+                        <a class="menu__link" href="#" data-goto=".latest-news">Blog</a>
                     </li>
                     <li class="menu__list-item">
-                        <a class="menu__link" href="#" data-goto=".header">Shop</a>
+                        <a class="menu__link" href="#" data-goto=".sign-up">Shop</a>
                     </li>
                     <li class="menu__list-item">
                         <a class="menu__link" href="#" data-goto=".footer">Contact</a>
                     </li>
                     <li class="menu__list-item-sign-up">
-                        <a class="menu__link menu__link_sign-up" href="#">Sign up</a>
+                        <a class="menu__link menu__link_sign-up" href="#" data-goto=".sign-up">Sign up</a>
                     </li>
                 </ul>
             </nav>
@@ -85,7 +86,7 @@
                 <div class="about-us__img-container rounded-img-container">
                     <div class="about-us__img-wrapper rounded-img-wrapper">
                         <img class="about-us__rounded-img rounded-img" src="img/about/interior.jpg" alt="Interior">
-                        <div class="about-us__rounded-img-decore rounded-img-decore"></div>
+                        <div class="rounded-img-decore about-us__rounded-img-decore"></div>
                     </div>
                 </div>
                 <div class="block-1__content about-us__content">
@@ -126,8 +127,26 @@
     <div class="completed-work">
         <div class="container completed-work__inner">
             <div class="title completed-work__title">3000+ Completed Work <br>Which WE have Successfully Done</div>
-            <div class="completed-work__diagram">
-
+            <div class="completed-work__diagram diagram">
+                <div class="diagram__item">
+                    <div class="diagram__item-number">980</div>
+                    <div class="diagram__item-title">Project</div>
+                </div>
+                <img class="diagram__line" src="img/completed-work/line.svg" alt="">
+                <div class="diagram__item diagram__item_other-side">
+                    <div class="diagram__item-number">520</div>
+                    <div class="diagram__item-title">Happy Clients</div>
+                </div>
+                <img class="diagram__line diagram__line_reversed" src="img/completed-work/line-reversed.svg" alt="">
+                <div class="diagram__item">
+                    <div class="diagram__item-number">330</div>
+                    <div class="diagram__item-title">Winners</div>
+                </div>
+                <img class="diagram__line" src="img/completed-work/line.svg" alt="">
+                <div class="diagram__item diagram__item_other-side">
+                    <div class="diagram__item-number">120</div>
+                    <div class="diagram__item-title">Recommend</div>
+                </div>
             </div>
         </div>
     </div>
@@ -135,8 +154,129 @@
         <div class="container testimonials__inner">
             <div class="subtitle testimonials__subtitle">Testimonials</div>
             <div class="title testimonials__title">Client says about us</div>
-            <div class="slider">
-
+            <div class="swiper testimonials__swiper">
+                <div class="testimonials__swiper-buttons">
+                    <button class="testimonials__swiper-button-prev" type="button">
+                        <svg class="testimonials__swiper-button-prev-img" width="8" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: #646464; stroke-width: 2px;">
+                            <path d="M6 1L2 5L6 9"/>
+                        </svg>
+                    </button>
+                    <button class="testimonials__swiper-button-next" type="button">
+                        <svg class="testimonials__swiper-button-next-img" width="8" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: #646464; stroke-width: 2px;">
+                            <path d="M1 1L5 5L1 9"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-1.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Louis Saville</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">CEO at Google inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-2.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Rekha Varadwaz</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">Manager at Nike inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-1.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Louis Saville</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">CEO at Google inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-1.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Louis Saville</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">CEO at Google inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-2.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Rekha Varadwaz</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">Manager at Nike inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials__slide">
+                        <div class="testimonials__slide-wrapper">
+                            <div class="testimonials__slide-content">
+                                <div class="testimonials__slide-image-wrapper">
+                                    <img class="testimonials__slide-image" src="img/testimonials/person-2.jpg" alt="Person photo">
+                                </div>
+                                <div class="testimonials__slide-person-info">
+                                    <div class="testimonials__slide-person-name">Rekha Varadwaz</div>
+                                    <div class="testimonials__slide-person-info-delimiter">/</div>
+                                    <div class="testimonials__slide-person-position">Manager at Nike inc</div>
+                                </div>
+                                <div class="testimonials__slide-review">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore
+                                    et dolore magna aliqua.</div>
+                                <div class="testimonials__slide-decoration">”</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -144,6 +284,34 @@
         <div class="container latest-news__inner">
             <div class="subtitle latest-news__subtitle">Latest News</div>
             <div class="title latest-news__title">From Our Blog</div>
+            <div class="latest-news__content">
+                <div class="latest-news__item">
+                    <div class="latest-news__rounded-img-container rounded-img-container">
+                        <div class="latest-news__rounded-img-wrapper rounded-img-wrapper">
+                            <img class="latest-news__rounded-img rounded-img" src="img/news/interior.jpg" alt="Interior">
+                            <div class="rounded-img-decore"></div>
+                        </div>
+                    </div>
+                    <div class="latest-news__item-title">2020 Interior Design Trends</div>
+                    <div class="text latest-news__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="latest-news__btn-container">
+                        <a class="btn" href="">Continue reading....</a>
+                    </div>
+                </div>
+                <div class="latest-news__item">
+                    <div class="latest-news__rounded-img-container rounded-img-container">
+                        <div class="latest-news__rounded-img-wrapper rounded-img-wrapper">
+                            <img class="latest-news__rounded-img rounded-img" src="img/news/interior-2.jpg" alt="Interior">
+                            <div class="rounded-img-decore"></div>
+                        </div>
+                    </div>
+                    <div class="latest-news__item-title">28 Notable Product at ARC Interior Design</div>
+                    <div class="text latest-news__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="latest-news__btn-container">
+                        <a class="btn" href="">Continue reading....</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="sign-up">
@@ -261,6 +429,9 @@
     </div>
 </footer>
 <script src="js/header.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/testimonials.js"></script>
+<script src="js/latest-news.js"></script>
 <script src="js/footer.js"></script>
 </body>
 </html>

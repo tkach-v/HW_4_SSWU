@@ -1,9 +1,3 @@
-@mixin scale-and-colorize-item($scale: 1, $color: inherit, $bg-color: inherit) {
-  color: $color;
-  transform: scale($scale);
-  background-color: $bg-color;
-}
-
 @mixin leaf-shape-rect($border-radius: 1rem, $bg-color: inherit) {
   border-radius: $border-radius 0;
   background-color: $bg-color;
