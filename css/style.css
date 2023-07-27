@@ -125,6 +125,20 @@ html {
   border: 2px solid #B0855B;
 }
 
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hide {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .title {
     font-size: 1.8rem;
@@ -380,6 +394,78 @@ html {
 }
 .service {
   margin-top: 200px;
+}
+
+.service__filter {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.service__filter-item {
+  border-radius: 20px;
+  border: 5px solid #37806B;
+  background: #FFF;
+  color: #37806B;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 0.88889rem;
+  font-weight: 700;
+  background: #37806B;
+  width: 100%;
+  max-width: 11rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.service__filter-item_selected {
+  border-radius: 20px;
+  border: 5px solid #37806B;
+  background: #FFF;
+  color: #37806B;
+  padding: 10px 15px;
+}
+
+.service__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service__content-row {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.service__card {
+  border-radius: 3.33333rem 0;
+  background-color: inherit;
+  background: #FFFFFF;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.14);
+  padding: 2rem 3rem;
+  max-width: calc(33.3333333333% - 6rem);
+  width: 100%;
+}
+
+.service__card_special {
+  background: #CAA892;
+}
+.service__card_special .service__card-title,
+.service__card_special .service__card-desc {
+  color: #FFFFFF;
+}
+
+.service__card-title {
+  color: #212121;
+  font-size: 1.33333rem;
+  font-weight: 700;
+  padding-bottom: 0.8rem;
+}
+
+.service__card-desc {
+  padding: 0;
 }
 
 .about {
@@ -690,14 +776,6 @@ html {
   position: relative;
   overflow: hidden;
 }
-.latest-news::before {
-  content: url("../img/common/decore-2.svg");
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  transform: translateY(50%);
-}
 
 .latest-news__inner {
   padding-top: 5rem;
@@ -758,17 +836,22 @@ html {
   opacity: 0;
 }
 
-.latest-news__inner {
-  opacity: 0;
-}
-
 @media (max-width: 992px) {
   .latest-news__content {
+    flex-direction: column;
+  }
+  .latest-news__item {
+    display: flex;
     flex-direction: column;
   }
   .latest-news__item-text,
   .latest-news__btn-container {
     opacity: 1;
+  }
+  .latest-news__rounded-img-container {
+    max-height: none;
+    height: auto;
+    align-self: center;
   }
 }
 @media (min-width: 992px) {
@@ -783,7 +866,21 @@ html {
     opacity: 1;
   }
 }
+.sign-up {
+  position: relative;
+}
+.sign-up::before {
+  content: url("../img/common/decore-2.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
 .sign-up__inner {
+  position: relative;
+  z-index: 0;
   padding-top: 4.5rem;
   padding-bottom: 5rem;
 }
@@ -816,6 +913,87 @@ html {
   padding-bottom: 2rem;
 }
 
+.sign-up__form {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.sign-up__form-row {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-bottom: 3rem;
+}
+
+.sign-up__input {
+  border: 0;
+  width: 100%;
+  border-radius: 1.11111rem 0;
+  background-color: #EEEEEE;
+  padding: 1rem 1.5rem;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.sign-up__input::placeholder {
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.sign-up__input:focus {
+  outline: none;
+}
+
+.sign-up__btn {
+  border: 0;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sign-up__form-messages {
+  max-width: 750px;
+  margin: 3rem auto;
+}
+
+.invalid-input {
+  border: 2px solid #ED4337;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+  background: linear-gradient(106.5deg, rgb(255, 215, 185) 23%, rgb(223, 159, 247) 93%);
+}
+
+.celebration__message {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 992px) {
+  .sign-up__form {
+    padding: 0 20px;
+  }
+  .sign-up__form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .sign-up__form-messages {
+    margin: 1.5rem auto;
+  }
+}
 .footer {
   background-color: #F8F8F8;
   position: relative;

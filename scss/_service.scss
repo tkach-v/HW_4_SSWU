@@ -4,3 +4,67 @@
 .service {
   margin-top: 200px;
 }
+
+.service__filter {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.service__filter-item {
+  @include mixins.service-selected-and-header-hover-btn();
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 0.88889rem;
+  font-weight: 700;
+  background: #37806B;
+  width: 100%;
+  max-width: 11rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.service__filter-item_selected {
+  @include mixins.service-selected-and-header-hover-btn;
+}
+
+.service__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service__content-row {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.service__card {
+  @include mixins.leaf-shape-rect(3.33333rem);
+  background: #FFFFFF;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.14);
+  padding: 2rem 3rem;
+  max-width: calc(100% / 3 - 6rem);
+  width: 100%;
+}
+
+.service__card_special {
+  background: #CAA892;
+
+  .service__card-title,
+  .service__card-desc {
+    color: #FFFFFF;
+  }
+}
+
+.service__card-title {
+  color: #212121;
+  font-size: 1.33333rem;
+  font-weight: 700;
+  padding-bottom: 0.8rem;
+}
+
+.service__card-desc {
+  padding: 0;
+}

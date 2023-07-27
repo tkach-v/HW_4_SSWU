@@ -1,13 +1,24 @@
 @use "vars.scss" as vars;
+@use "mixins.scss" as mixins;
 
 .sign-up {
+  position: relative;
 
+  &::before {
+    content: url("../img/common/decore-2.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+  }
 }
 
 .sign-up__inner {
+  position: relative;
+  z-index: 0;
   padding-top: 4.5rem;
   padding-bottom: 5rem;
-
 }
 
 .sign-up__title {
@@ -37,4 +48,90 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2rem;
+}
+
+.sign-up__form {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.sign-up__form-row {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-bottom: 3rem;
+}
+
+.sign-up__input {
+  border: 0;
+  width: 100%;
+  @include mixins.leaf-shape-rect(1.11111rem, #EEEEEE);
+  padding: 1rem 1.5rem;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+
+  &::placeholder {
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sign-up__btn {
+  border: 0;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sign-up__form-messages {
+  max-width: 750px;
+  margin: 3rem auto;
+}
+
+.invalid-input {
+  border: 2px solid #ED4337;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+  background: linear-gradient(106.5deg, rgba(255, 215, 185, 1) 23%, rgba(223, 159, 247, 1) 93%);
+}
+
+.celebration__message {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@media (max-width: vars.$mobile) {
+  .sign-up__form {
+    padding: 0 20px;
+  }
+
+  .sign-up__form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sign-up__form-messages {
+    margin: 1.5rem auto;
+  }
 }
