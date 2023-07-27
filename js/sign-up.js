@@ -57,7 +57,7 @@ document.querySelector('.sign-up__form').addEventListener('submit', event => {
             const celebrationMessage = document.createElement('div');
             celebrationMessage.classList.add('celebration__message');
             celebrationMessage.classList.add('title');
-            celebrationMessage.innerText = `Only today (${day}.${month}.${year}), for users with the name Sigma, you get a 120% discount!`;
+            celebrationMessage.innerText = `Only today (${day}.${month}.${year}), for users with the name Sigma get a 120% off!`;
             celebration.appendChild(celebrationMessage);
             document.body.appendChild(celebration);
             celebration.classList.remove('hidden');

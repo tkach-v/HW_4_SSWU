@@ -68,3 +68,33 @@
 .service__card-desc {
   padding: 0;
 }
+
+// do adaptive
+@media (max-width: vars.$mobile) {
+  .service__filter {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .service__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service__content-row {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: start;
+  }
+
+  .service__card {
+    max-width: calc(100% - 6rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .service__filter {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
