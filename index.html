@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="loading">
+    <div class="loading-text">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</div>
+<div class="inactive-user-alert">
+    <div class="inactive-user-alert__content">
+        <div class="inactive-user-alert__title">You have been inactive for 60 seconds. Do you want to stay on this page?</div>
+        <div class="inactive-user-alert__btn-container">
+            <button class="inactive-user-alert__btn inactive-user-alert__btn_yes" type="button">Yes</button>
+            <button class="inactive-user-alert__btn inactive-user-alert__btn_no" type="button">No</button>
+        </div>
+    </div>
+</div>
 <header class="header">
     <div class="header__top">
         <div class="container header__top-content">
@@ -347,6 +367,12 @@
             </div>
         </div>
     </div>
+    <div class="map">
+        <div class="container map__inner">
+            <div class="title map__title">Find Us: Interactive Google Map</div>
+            <div id="#map" class="map__container"></div>
+        </div>
+    </div>
     <div class="sign-up">
         <div class="container sign-up__inner">
             <div class="title sign-up__title">Don’t forget to sign up</div>
@@ -477,11 +503,15 @@
         right reserved.
     </div>
 </footer>
+<script src="js/loading.js"></script>
+<script src="js/inactive_user.js"></script>
 <script src="js/header.js"></script>
 <script src="js/service.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="js/testimonials.js"></script>
 <script src="js/latest-news.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8dMgeZ9kWt6CZhdcaokYZegK03BgCNFA&callback=myMap"></script>
 <script src="js/sign-up.js"></script>
 <script src="js/footer.js"></script>
 </body>
