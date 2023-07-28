@@ -234,6 +234,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .menu__list-item,
+  .menu__list-item-sign-up {
+    font-size: 1rem;
+  }
+}
+
 // add hover on desktop
 @media (min-width: vars.$mobile) {
   .menu__list-item:hover {
