@@ -1,7 +1,7 @@
 const newsBlock = document.querySelector('.latest-news');
 const newsContent = newsBlock.querySelector('.latest-news__content');
-const newsContentOffsetTop = newsBlock.offsetTop;
-const screenHeight = screen.height;
+const newsContentOffsetTop = newsBlock.offsetTop + newsContent.offsetTop;
+const screenHeight = window.innerHeight;
 
 let show = (document.documentElement.scrollTop + screenHeight) > newsContentOffsetTop;
 
