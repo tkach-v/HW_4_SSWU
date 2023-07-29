@@ -1,29 +1,27 @@
-const headerHeight = document.querySelector('.header__top').offsetHeight;
 const newsBlock = document.querySelector('.latest-news');
-const newsInner = newsBlock.querySelector('.latest-news__inner');
-const newsBlockOffsetTop = newsBlock.offsetTop;
-const newsBlockOffsetHeight = newsBlock.offsetHeight;
+const newsContent = newsBlock.querySelector('.latest-news__content');
+const newsContentOffsetTop = newsBlock.offsetTop;
 const screenHeight = screen.height;
 
-let show = (document.documentElement.scrollTop + screenHeight) > newsBlockOffsetTop;
+let show = (document.documentElement.scrollTop + screenHeight) > newsContentOffsetTop;
 
 if (show) {
-    newsInner.classList.add('show');
-    newsInner.classList.remove('hide');
+    newsContent.classList.add('show');
+    newsContent.classList.remove('hide');
 } else {
-    newsInner.classList.add('hide');
-    newsInner.classList.remove('show');
+    newsContent.classList.add('hide');
+    newsContent.classList.remove('show');
 }
 
 function handleScroll() {
-    show = (document.documentElement.scrollTop + screenHeight) > newsBlockOffsetTop;
+    show = (document.documentElement.scrollTop + screenHeight) > newsContentOffsetTop;
 
     if (show) {
-        newsInner.classList.add('show');
-        newsInner.classList.remove('hide');
+        newsContent.classList.add('show');
+        newsContent.classList.remove('hide');
     } else {
-        newsInner.classList.add('hide');
-        newsInner.classList.remove('show');
+        newsContent.classList.add('hide');
+        newsContent.classList.remove('show');
     }
 }
 

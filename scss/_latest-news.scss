@@ -9,7 +9,6 @@
 .latest-news__inner {
   padding-top: 5rem;
   padding-bottom: 6.5rem;
-  transition: all 1.5s ease-in-out;
 }
 
 .latest-news__title,
@@ -24,6 +23,7 @@
 .latest-news__content {
   display: flex;
   gap: 6rem;
+  transition: all 2s ease-in-out;
 }
 
 .latest-news__item {

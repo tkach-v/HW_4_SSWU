@@ -152,6 +152,7 @@ html {
   font-style: normal;
   font-weight: 400;
   color: #646464;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -549,7 +550,8 @@ html {
   }
 }
 .service {
-  margin-top: 200px;
+  margin-top: 150px;
+  padding-top: 50px;
 }
 
 .service__filter {
@@ -649,7 +651,8 @@ html {
   }
 }
 .about {
-  margin-top: 140px;
+  margin-top: 90px;
+  padding-top: 50px;
   position: relative;
 }
 .about::before {
@@ -964,7 +967,6 @@ html {
 .latest-news__inner {
   padding-top: 5rem;
   padding-bottom: 6.5rem;
-  transition: all 1.5s ease-in-out;
 }
 
 .latest-news__title,
@@ -979,6 +981,7 @@ html {
 .latest-news__content {
   display: flex;
   gap: 6rem;
+  transition: all 2s ease-in-out;
 }
 
 .latest-news__item {

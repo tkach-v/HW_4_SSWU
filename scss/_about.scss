@@ -2,7 +2,8 @@
 @use "mixins.scss" as mixins;
 
 .about {
-  margin-top: 140px;
+  margin-top: 90px;
+  padding-top: 50px;
   position: relative;
 
   &::before {
